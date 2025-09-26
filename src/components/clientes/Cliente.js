@@ -2,9 +2,40 @@ import React from "react";
 import { Container, Table, Row, Col, Button, Form, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+const clientes = [
+    {
+        id: 1,
+        documento: "1025887459",
+        primerNombre: "Anderson",
+        segundoNombre: "Giovanny",
+        primerApellido: "Montoya",
+        segundoApellido: "Rojas",
+        email: "anderson@gmail.com",
+        direccion: "Calle 133",
+        telefono: "3115644111",
+        fechaNacimiento: "12-05-2005",
+        edad: 20
+    },
+    {
+        id: 2,
+        documento: "1025887458",
+        primerNombre: "Gisel",
+        segundoNombre: "Estefania",
+        primerApellido: "Torres",
+        segundoApellido: "Corredor",
+        email: "estefaniatorres1216@gmail.com",
+        direccion: "Tv 70 # 67b sur 80",
+        telefono: "3115644133",
+        fechaNacimiento: "12-05-2005",
+        edad: 20
+    }
+];
+
+
+
 const Cliente = () => {
     return (
-        <Container  className="my-5">
+        <Container className="my-5">
             <Row className="mb-4">
                 <Col>
                     <h2>Lista de clientes</h2>
@@ -24,8 +55,8 @@ const Cliente = () => {
                         />
                     </Col>
                     <Col md={4} >
-                        <Button type="submit" className="me-4"  variant="outline-dark" >Buscar</Button>
-                        <Button type="button"  variant="outline-dark">Mostrar Todos</Button>
+                        <Button type="submit" className="me-4" variant="outline-dark" >Buscar</Button>
+                        <Button type="button" variant="outline-dark">Mostrar Todos</Button>
                     </Col>
                 </Row>
             </Form>
@@ -47,182 +78,36 @@ const Cliente = () => {
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1025887459</td>
-                        <td>Gisel</td>
-                        <td>Estefania</td>
-                        <td>Torres</td>
-                        <td>Corredor</td>
-                        <td>estefaniatorres1216@gamail.com</td>
-                        <td>Tv 70 # 67b sur 80</td>
-                        <td>3115644133</td>
-                        <td>12-05-2005</td>
-                        <td>20</td>
-                        <td>
-                            <Dropdown>
-                                <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-                                    Acciones
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/clientes/EditarCliente">Editar</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Detalles</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </td>
-                    </tr>
-                  
+                    {clientes.map((cliente) => (
+                        <tr key={cliente.id}>
+                            <td>{cliente.documento}</td>
+                            <td>{cliente.primerNombre}</td>
+                            <td>{cliente.segundoNombre}</td>
+                            <td>{cliente.primerApellido}</td>
+                            <td>{cliente.segundoApellido}</td>
+                            <td>{cliente.email}</td>
+                            <td>{cliente.direccion}</td>
+                            <td>{cliente.telefono}</td>
+                            <td>{cliente.fechaNacimiento}</td>
+                            <td>{cliente.edad}</td>
+                            <td>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
+                                        Acciones
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to={`/clientes/editar/${cliente.id}`}>
+                                            Editar
+                                        </Dropdown.Item>
+                                        <Dropdown.Item as={Link} to={`/clientes/detalles/${cliente.id}`}>
+                                            Detalles
+                                        </Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
 
 

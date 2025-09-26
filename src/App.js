@@ -15,6 +15,7 @@ import BarraCliente from './components/clientes/BarraCliente';
 import Cliente from './components/clientes/Cliente';
 import AgregarCliente from './components/clientes/AgregarCliente';
 import EditarCliente from './components/clientes/EditarCliente';
+import DetallesCliente from './components/clientes/DetallesCliente';
 
 function App() {
   return (
@@ -28,8 +29,9 @@ function App() {
       
         <Routes>
           <Route path='/clientes/Cliente' element={<Cliente/>}></Route>
-          <Route path='/clientes/AgregarCliente' element={<AgregarCliente/>}></Route>
-          <Route path='/clientes/EditarCliente' element={<EditarCliente/>}></Route>
+          <Route path='/clientes/AgregarCliente:' element={<AgregarCliente/>}></Route>
+          <Route path='/clientes/editar/:id' element={<EditarCliente/>}></Route>
+          <Route path='/clientes/detalles/:id' element={<DetallesCliente/>}></Route>
           
           
         </Routes>
