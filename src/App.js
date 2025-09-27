@@ -16,6 +16,10 @@ import Cliente from './components/clientes/Cliente';
 import AgregarCliente from './components/clientes/AgregarCliente';
 import EditarCliente from './components/clientes/EditarCliente';
 import DetallesCliente from './components/clientes/DetallesCliente';
+import Usuario from './components/usuarios/Usuario';
+import EditarUsuario from './components/usuarios/EditarUsuario';
+import DetallesUsuario from './components/usuarios/DetallesUsuario';
+import AgregarUsuario from './components/usuarios/AgregarUsuario';
 
 function App() {
   return (
@@ -24,15 +28,28 @@ function App() {
     
     <SideBar />
     
-    <div style={{ marginLeft: "200px", background:"#D8CFE8",  height: "auto" }}>
+    <div style={{ marginLeft: "200px", background:"#D8CFE8",  height: "150vh" }}>
       <BarraCliente/>
       
         <Routes>
+          {/* Rutas de cliente */}
           <Route path='/clientes/Cliente' element={<Cliente/>}></Route>
-          <Route path='/clientes/AgregarCliente:' element={<AgregarCliente/>}></Route>
+          <Route path='/clientes/AgregarCliente' element={<AgregarCliente/>}></Route>
           <Route path='/clientes/editar/:id' element={<EditarCliente/>}></Route>
           <Route path='/clientes/detalles/:id' element={<DetallesCliente/>}></Route>
           
+          {/* rutas del afiliado*/}
+
+
+
+          {/*rutas del usuario*/}
+          <Route path='/usuarios/Usuario' element={<Usuario/>}></Route>
+          <Route path='/usuarios/AgregarUsuario' element={<AgregarUsuario/>}></Route>
+          <Route path='/usuarios/EditarUsuario/:id' element={<EditarUsuario/>}></Route>
+          <Route path='/usuarios/detalles/:id' element={<DetallesUsuario/>}></Route>
+
+
+
           
         </Routes>
       </div>

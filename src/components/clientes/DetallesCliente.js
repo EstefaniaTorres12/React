@@ -34,6 +34,43 @@ const clientes = [
     }
 ];
 
+
+const afiliados = [
+    {
+        id: "3",
+        documento:"1214558968",
+        primerNombre: "Michael",
+        segundoNombre: "Ferney",
+        primerApellido: "Fonseca",
+        segundoApellido: "Mendoza",
+        email: "maicol@gmail.com",
+        direccion: "Calle 44",
+        telefono: "3115877499"
+    },
+    {
+        id: "4",
+        documento: "1214558968",
+        primerNombre: "Daniel",
+        segundoNombre: "",
+        primerApellido: "Ramirez",
+        segundoApellido: "",
+        email: "Daniel12@gmail.com",
+        direccion: "Calle 55",
+        telefono: "3558896647"
+    },
+    {
+        id: "5",
+        documento: "1214558968",
+        primerNombre: "Maria",
+        segundoNombre: "Daniela",
+        primerApellido: "Blanco",
+        segundoApellido: "Lopez",
+        email: "Maria55@gmail.com",
+        direccion: "Calle 1 sur",
+        telefono: "3333333333"
+    }
+];
+
 const DetallesCliente = () => {
 
     const { id } = useParams();
@@ -81,6 +118,51 @@ const DetallesCliente = () => {
                 </Col>
             </Row>
 
+            <Table className="my-5" striped bordered hover>
+                <thead className="table-secondary">
+                    <tr >
+                        <td scope="col">Documento</td>
+                        <td scope="col">Primer Nombre</td>
+                        <td scope="col">Segundo Nombre</td>
+                        <td scope="col">Primer Apellido</td>
+                        <td scope="col">Segundo Apellido</td>
+                        <td scope="col">Email</td>
+                        <td scope="col">Direccion</td>
+                        <td scope="col">Telefono</td>
+                        <td scope="col">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {afiliados.map((afiliado) => (
+                        <tr key={afiliado.id}>
+                            <td>{afiliado.documento}</td>
+                            <td>{afiliado.primerNombre}</td>
+                            <td>{afiliado.segundoNombre}</td>
+                            <td>{afiliado.primerApellido}</td>
+                            <td>{afiliado.segundoApellido}</td>
+                            <td>{afiliado.email}</td>
+                            <td>{afiliado.direccion}</td>
+                            <td>{afiliado.telefono}</td>
+                            <td>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
+                                        Acciones
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to={`/clientes/editar/${cliente.id}`}>
+                                            Editar
+                                        </Dropdown.Item>
+                                        <Dropdown.Item as={Link} to={`/clientes/detalles/${cliente.id}`}>
+                                            Detalles
+                                        </Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Habilitar</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
         </Container>
     );
 }
